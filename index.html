@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon"
+    href="https://cdn.icon-icons.com/icons2/2415/PNG/512/html_original_wordmark_logo_icon_146478.png"
+    type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pagina de Ejemplo para Proyecto Web Basico con HTML5, CSS de IHC">
+  <meta name="keywords" content="HTML, Bootstrap, CSS, JavaScript">
+  <meta name="author" content="ING. JUANCITO PEÑA">
+  <meta name="copyright" content="https://advisertecnology.com/" />
+  <title>Mini Blog con HTML5</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://kit.fontawesome.com/yourcode.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+ <!-- Contenedor principal -->
+  <div class="container">
+
+   <!-- Carrusel de imágenes -->
+   <div class="w3-container">
+    <h1 style ="text-align: center;">Hoy vamos a hablar de mí personaje favorito de Super Smash Bros y de Todo Nintendo</h1>
+    
+    <p>"Tuve un sueño... En el sueño, nubes oscuras de tormenta amenazaban todo Hyrule... Pero de repente, un rayo de luz salió del bosque, partiendo las nubes e iluminando la tierra... La luz se convirtió en una figura que sostenía una brillante piedra verde, seguido por un hada... Sé que esta es una profecía, que alguien vendría del bosque... Sí, creo que tú podrías ser el elegido..."
+      — Princesa Zelda en Ocarina del Tiempo.
+    </p>
+  </div>
+
+  <div class="w3-content" style="max-width:1200px">
+    <img class="mySlides" src="https://www.coliseugeek.com.br/wp-content/uploads/2023/01/4c9a3-clickwallpapers-the-legend-of-zelda-tears-of-the-kingdom-img1.jpeg" style="width:100%">
+    <img class="mySlides" src="https://images5.alphacoders.com/131/1315150.jpg" style="width:100%">
+    <img class="mySlides" src="https://www.pixel4k.com/wp-content/uploads/2019/06/the-legend-of-zelda-breath-of-wild_1559798191.jpg" style="width:100%">
+    <img class="mySlides" src="https://wallpapercave.com/wp/wp3506541.jpg" style="width:100%">
+    </div>
+
+  <div class="w3-center">
+    <div class="w3-section">
+      <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+      <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+    </div>
+    <!-- <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+    <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+    <button class="w3-button demo" onclick="currentDiv(3)">3</button>  -->
+  </div>
+
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
+    }
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-red", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-red";
+    }
+  </script>
+
+    <br>
+    <!-- Encabezado de la página -->
+    <header class="header">
+      <div class="header-content">
+        <a class="navbar-brand" href="#">BIENVENIDOS A MI MINI-BLOG</a>
+        <nav class="nav-menu">
+          <a href="index.html">Inicio</a>
+          <a href="acerca.html">Acerca de</a>
+          <a href="cursos.html">Cursos</a>
+          <a href="contactos.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+      <div class="row">
+        <article class="col-68">
+          <h3 class="h4 mp-5 pt-1">¿Quién es Link de la Leyenda de Zelda?</h3>
+          <article>
+
+            <img class="web"
+              src="https://cdn.wikimg.net/en/zeldawiki/images/1/15/TotK_Link_Artwork.png?version=3b82ab3b1da77397c3a3239e57810376"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <hr>
+            <p class="Articulo1">
+
+              Link (リンク, Rinku ?, Hylian LHylian IHylian NHylian K en Hylian) es el nombre del protagonista de The Legend of Zelda. Es el Héroe Elegido por las Diosas, portador de la Espada Maestra y representante de la Trifuerza del Valor. Una vez iniciada su aventura, Link se convierte en un héroe legendario después de salvar a Hyrule de las fuerzas malignas ocasionadas por Ganon (también conocido como Ganondorf). En gran parte de su viaje, consigue distintas armas y objetos con los que logra enfrentarse a sus enemigos, además de también ayudarle a completar las diversas mazmorras que visita. Además de la guía de las Diosas, Link también suele encontrarse con distintos aliados, quienes luego le acompañan hasta el final del viaje; la más reconocida siendo Navi en The Legend of Zelda: Ocarina of Time. En otras ocasiones, Link también recibe ayuda de la Princesa Zelda, quien posteriormente se vuelve también su aliada con el mismo objetivo de defender Hyrule.</p>
+
+            <p class="Articulo1">
+              Gracias a su legado como el héroe de Hyrule, cada encarnación de Link recibe distintos títulos respecto a su aventura, incluyendo el famoso título "Héroe Legendario" o "Héroe del Tiempo" en Ocarina of Time.</p>
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+
+          <article>
+            <br>
+            <h3><b>¿Cómo es su Personalidad?</b></h3>
+             <br>
+            <img class="web"
+              src="https://i.blogs.es/e48f35/link-2000/450_1000.webp"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+
+            <p class="Articulo1">Al ser diseñado como un protagonista silencioso o avatar para que el jugador se inserte en la historia a través de él; la personalidad de Link no es explorada en la historia de los videojuegos de la saga, tradición de la saga que continúa hasta la actualidad. Aún así, en distintos videojuegos se remarcan ciertos rasgos de su forma de ser, principalmente siendo reconocido y proclamado por su coraje ante las dificultades junto a sus cualidades heroicas por excelencia como: su amabilidad, intrepidez, solidaridad y humildad con los demás. Otro rasgo icónico de Link es su sentido de la responsabilidad por proteger a Hyrule y a la gente, formándose como un hábil guerrero sin importar sus orígenes o su debilidad en comparación con figuras poderosas como La Princesa Zelda o Ganon. Link ha sido capaz de realizar esto incluso cuando desconoce el hecho de que este destino fue forjado por las Diosas, demostrando un carácter desinteresado ante posiciones de poder o elecciones del destino, y en cambio, demostrando humildad por las recompensas y un carácter genuinamente generoso.
+              <br>
+              <br>
+              <h3><b>Diseño de personaje</b></h3>
+              <br>
+              Cada Link lleva como traje una túnica verde y un gorro del mismo color (la tonalidad del verde suele variar en cada juego). Durante el transcurso de algunos juegos, usa variaciones de su túnica u otro tipo de armadura, como en Twilight Princess donde emplea la Armadura Mágica y el Traje Zora. Además, Link se pone guantes especiales o pulseras que le ayudan a aumentar su fuerza o darle algún tipo de superpoder.
+              <br>
+              <br>
+              <h3><b>Edad</b></h3>
+              <br>
+              Su edad oscila entre los diez y diecinueve años en cualquier punto de la saga. Aún así, la leyenda dice que solo alguien mayor de diecisiete años podrá poseer el poder de la Trifuerza, lo que sitúa a Link sobre esa franja de edad. En algunos juegos de Zelda se conoce la edad de Link con exactitud, como en Ocarina of Time, donde Link tiene diez años y tras despertar de su letargo en el Reino Sagrado tiene diecisiete años. En otros juegos, la edad de Link es más bien una suposición, un caso claro es Majora's Mask, pues cronológicamente es el mismo Link que el de Ocarina of Time, así que su edad oscila entre los diez y doce años. Sin embargo, en otros juegos de Zelda no se sabe muy bien cual es la edad de Link por la falta de información, un ejemplo claro es The Legend of Zelda.
+              <br>
+              <h3><b>Jugabilidad de Espada</b></h3>
+              <br>
+              Link está también representado como zurdo en casi todos los juegos, a excepción de Twilight Princess y en Skyward Sword, donde es diestro, debido a que fue cambiado para encontrar una mejor forma de controlar la espada del personaje con el mando de Wii. Sin embargo, en la versión de GameCube de Twilight Princess, Link es zurdo.
+              <br>
+              <h3><b>Concepto y Creación - Rol</b></h3>
+              <br>
+              Link fue creado por Shigeru Miyamoto, inspirado por sus recuerdos de su infancia, incluyendo películas y libros que disfrutó en su juventud. Takashi Tezuka (diseñador de videojuegos) también siguió este patrón, notablemente tomando inspiración de la obra El Señor de los Anillos de J. R. R Tolkien, que fue una de sus obras favoritas.
+              <br>
+              <h3><b>Diseño de personaje</b></h3>
+              <br>
+              El primer sprite de Link en The Legend of Zelda fue hecho por Takashi Tezuka, que tomó inspiración del personaje Peter Pan en su adaptación homónima hecha por Disney, de la cual se tomó el color verde para la ropa de Link para hacer que el personaje sea reconocible. Junto a su diseño caricaturesco, la apariencia de Link toma una aparente inspiración de los elfos o duendes, por el hecho de tener una muy baja estatura y sus orejas características. El cabello de Link fue castaño- negro en los primeros videojuegos de la saga, debido a las limitaciones de colores en la consola. A partir de a Link to the Past, su cabello fue representado como rubio fuerte y su color de ojos fue de color azul oscuro.
+             
+            </p>
+
+
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </article>
+          <article>
+            <br>
+            <h3><b>The Legend of Zelda: Ocarina of Time</b></h3>
+            <br>
+            <img class="web"
+              src="https://upload.wikimedia.org/wikipedia/en/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg"
+              alt="Imagen de muestra" class="img-fluid rounded mb-3">
+            <p class="Articulo1">
+              Este Link es el cuarto de la Cronología. Link nace durante la Guerra Civil de Hyrule, y su madre, moribunda, lo deja en el Bosque Kokiri al cargo del Gran Árbol Deku, para evitar que quede expuesto a la guerra. El Gran Árbol Deku introduce al niño Hyliano como si fuera un Kokiri, encajándole con sus compañeros. Sin embargo, como Link no posee un hada como los Kokiri, siempre es como un extraño, sobre todo a ojos de Mido, el autoproclamado jefe de los Kokiri.</p>
+              <br>
+              <h3><b>The Legend of Zelda: Majora's Mask </b> </h3>
+              <br>
+              <img class="web" src="https://upload.wikimedia.org/wikipedia/en/6/60/The_Legend_of_Zelda_-_Majora%27s_Mask_Box_Art.jpg"
+              alt="aqui va una image">
+              <p class="Articulo1">
+                Majora's Mask se produce poco después de Ocarina of Time. Después de haber sido devuelto a su infancia por la Princesa Zelda, al final de Ocarina of Time, Link se marcha de Hyrule en busca de su perdida amiga Navi.
+                Mientras viaja en lo profundo del Bosque Perdido, es emboscado por Skull Kid y sus dos amigos, las hadas Taya y Tael. Skull Kid escapa con la Ocarina del Tiempo, y mientras Link persigue a Skull Kid, es transportado a un mundo paralelo de Hyrule, Términa, donde el Skull Kid usa su magia para convertir a Link en un Deku. Durante este proceso, Taya se separa de Skull Kid y de Tael, y se une a Link convirtiéndose en su compañera.
+              </p>
+
+
+            <a href="https://es.wikipedia.org/wiki/Desarrollo_web" target="_blank" class="btn btn-primary">Ver más</a>
+
+
+          </article>
+
+
+          <article>
+            <br>
+            <h3><b>The Legend of Zelda: Twilight Princess</b></h3>
+            <br>
+            <img class="web"
+              src="https://www.zeldadungeon.net/wp-content/uploads/2019/12/Twilight-Princess-Versions.jpg"
+              alt="">
+
+            <p class="Articulo1">
+              En Twilight Princess por orden cronológico, es el quinto Link (Línea de Link niño). Link es un adolescente que vive en la aldea de Ordon. A petición de Moy, único guerrero de la aldea, Link decide emprender un viaje al Castillo de Hyrule. Antes de que Link pueda realizar este viaje, su pueblo es atacado por el Rey Bulblin. Link es golpeado hasta quedar inconsciente y los niños, junto con Ilia son secuestrados. Cuando Link se despierta, se adentra en la Región de Farore, que ha sido invadida por el Crepúsculo. Una vez en el Crepúsculo, en lugar de convertirse en un espíritu como todos los demás, se transforma en un lobo. Es capturado por los Seres de las Sombras, pero consigue escapar con la ayuda de Midna.
+            </p>
+            <br>
+            <h3><b>The Legend of Zelda: Breath of the Wild</b></h3>
+            <br>
+            <img class="web"
+              src="https://assetsio.reedpopcdn.com/lets-compare-and-contrast-the-us-and-european-legend-of-zelda-breath-of-the-wild-box-art-1484308708348.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+              alt="">
+
+            <p class="Articulo1">
+              Este Link proviene de 100 años antes de los sucesos de Breath of the Wild. Perteneciendo originalmente al grupo de los Caballeros de Hyrule, el Rey Rhoam necesitaba a un nuevo héroe elegido por la Espada Maestra, pues él sabía que Ganon, el Cataclismo regresaría muy pronto. Así que Link fue elegido para que la Familia real de Hyrule esté preparada para la llegada de Ganon y pueda pelear junto con otros guerreros dotados conocidos como los Elegidos que estarían encargados de pilotar las Bestias Divinas. Link, también sería elegido como el guardaespaldas de la Princesa Zelda, pues ella no había despertado sus poderes divinos aún y tenía que hacerlo en un ambiente seguro, aunque agobiara a la Princesa Zelda, ya que ella cree que Link es muy superior a ella. Después de eso, se llevó a cabo una ceremonia con todos lo Elegidos reunidos.
+            </p>
+            <br>
+            <h3><b>The Legend of Zelda: Tears of the Kingdom</b></h3>
+            <br>
+            <img class="web"
+              src="https://zelda.nintendo.com/tears-of-the-kingdom/images/share-fb.jpg"
+              alt="">
+
+            <p class="Articulo1">
+              The Legend of Zelda: Tears of the Kingdom (ゼルダの伝説 ティアーズ オブ ザ キングダム, Zeruda no Densetsu Tiāzu obu za Kingudamu ?) es un videojuego de la saga The Legend of Zelda, desarrollado por Nintendo para su consola Nintendo Switch. Es una secuela del videojuego de 2017 The Legend of Zelda: Breath of the Wild.
+          Su desarrollo empezó en 2017, tras finalizar la producción de The Legend of Zelda: Breath of the Wild. Durante el Nintendo Direct de la E3 2019, se confirmó oficialmente que dicho videojuego tendría una secuela. La idea de producirla vino del hecho de que Eiji Aonuma, productor del mismo, quería revisitar la región de Hyrule pero incorporando una nueva historia y mecánicas de jugabilidad. Inicialmente, se pensaron en nuevas ideas para un DLC, pero finalmente terminaron en un nuevo videojuego cuando se recopilaron demasiadas.
+            </p>
+          
+
+          </article>
+
+        </article>
+
+        </section>
+        <!-- Barra lateral -->
+        <aside class="col-28">
+          <h2 class="h4">💚Tus Anuncios con Nostros lo ven todos</h2>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media.tenor.com/xSy4FAY4d1kAAAAd/link-zelda.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center"><b>Listo para la pelea.</p>
+            </b> <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://i.gifer.com/2p4l.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center"><b>Link - Skyward Sword.</p></b>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://67.media.tumblr.com/94c5ac67a95a10c78e1fa36fa6eb945e/tumblr_o8rt8k99sd1qzp9weo5_1280.gif"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p><b>Link - Breath of the Wild.</b></p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img class="web"
+              src="https://media.tenor.com/iWgGnfUzRoYAAAAC/zelda-the-legend-of-zelda.gif"
+              alt="Anuncio publicitario" class="img-fluid rounded mb-2">
+            <p><b>Link retirando la Espada Sagrada - Link Ocarina del Tiempo </b>
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://media.tenor.com/ROKx2Jrbcx4AAAAC/link-super-smash-bros.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p><b>Escudo Hyliano en acción.</b>
+            </p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <img src="https://i.pinimg.com/originals/f5/37/61/f537610b50d9ac2e8682d3923a24c8f2.gif" alt="Anuncio publicitario"
+              class="img-fluid rounded mb-2">
+            <p class="text-center"><b>Link en Presentación de Super Smash Bros Ultimate.</b></p>
+            <a href="#" class="btn btn-success">Ver Publicidad</a>
+          </div>
+          
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/_NElFLzgdUs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p><b>Trailer de Zelda - Ocarina del Tiempo de Nintendo 64. - 21 de noviembre de 1998. </b>
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/N--8ff2cbmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p><b>The Legend of Zelda: Majora's Mask - 27 de abril de 2000.</b>
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/YHu7hvxjdww" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p><b>The Legend of Zelda: Twilight Princess - 19 de noviembre de 2006.</b>
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/r7qozxgX4c8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p><b>The Legend of Zelda: Skyward Sword - 18 de noviembre de 2011.</b>
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/zw47_q9wbBE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p><b>The Legend of Zelda: Breath of the Wild - 3 de marzo de 2017.</b>
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+          <div class="d-flex flex-column align-items-center mb-4">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2SNF4M_v7wc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p><b>The Legend of Zelda: Tears of the Kingdom - 12 de mayo de 2023.</b>
+            </p>
+            <a href="#" class="btn btn-success">Ver más Videos</a>
+
+          </div>
+
+
+
+        </aside>
+
+      </div>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-primary text-white mt-4">
+      <h2>&copy; <b>Wascar Salvador Mateo Reyes 14-EIST-1-001.</b></h2>
+      <h2><a href="https://themachine.com/" target="_blank"
+          style="color: rgb(9, 225, 110);">https://themachine.com/</a></h2>
+
+      <hr>
+      <div class="centrar-contenido">
+        <div class="redes">
+          <h2><b>Sígueme en mi Redes Sociales</b></h2>
+
+          <!-- Agregamos font awesome icons -->
+          <a href="https://www.linkedin.com/in/wascar-mateo-707439113/" class="fa fa-linkedin-square"
+            style="font-size:48px; color: rgb(10, 98, 214);"></a>
+          <a href="https://www.youtube.com/channel/UCLCi6hvbK39w6nLI0DOq8VQ" class="fa fa-youtube-square"
+            style="font-size:48px; color: rgb(214, 17, 10);"></a>
+          <a href="https://www.facebook.com/wascarsalvador" class="fa fa-facebook-square"
+            style="font-size:48px; color: rgb(68, 143, 217);"></a>
+          <a href="https://twitter.com/Wascar007" class="fa fa-twitter-square"
+            style="font-size:48px;  color: rgb(6, 6, 6);"></a>
+          <a href="https://github.com/Themachine96" class="fa fa-github-square"
+            style="font-size:48px; color: rgb(0, 0, 0);"></a>
+          <a href="https://www.instagram.com/wascarsalvador/?next=%2F" class="fa fa-instagram"
+            style="font-size:48px; color: rgb(184, 28, 0);"></a>
+
+
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+
+</body>
+
+</html>
